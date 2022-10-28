@@ -2,9 +2,12 @@ import React from "react";
 import styles from "./SelectionTabs.module.scss";
 
 interface SelectionTabsProps {
-  titles: ("Resources" | "Requests" | "Users")[];
-  selector: (e: "Resources" | "Requests" | "Users") => void;
-  selected: "Resources" | "Requests" | "Users";
+  titles: {
+    label: "Resources" | "Requests" | "Users";
+    value: "resource" | "request" | "user";
+  }[];
+  selector: (e: "resource" | "request" | "user") => void;
+  selected: "resource" | "request" | "user";
 }
 
 export const SelectionTabs: React.FC<SelectionTabsProps> = ({
@@ -14,14 +17,16 @@ export const SelectionTabs: React.FC<SelectionTabsProps> = ({
 }) => {
   return (
     <div className={styles.tabContainer}>
-      {titles?.map((label, index) => {
+      {titles?.map((item, index) => {
         return (
           <div
-            className={label === selected ? styles.selectedTab : styles.tab}
+            className={
+              item.value === selected ? styles.selectedTab : styles.tab
+            }
             key={index}
-            onClick={() => selector(label)}
+            onClick={() => selector(item.value)}
           >
-            {label}
+            {item.label}
           </div>
         );
       })}
