@@ -15,7 +15,13 @@ export const Search: React.FC<SearchProps> = ({ selected, selector }) => {
         title="search"
         placeholder="Search"
         className={styles.searchBar}
-        onChange={(e) => debounce(() => selector(e.target.value), 800)}
+        onChange={(e) => {
+          if (!e.target.value) {
+            selector(e.target.value);
+          } else {
+            debounce(() => selector(e.target.value), 800);
+          }
+        }}
         // value={selected}
       />
     </div>
