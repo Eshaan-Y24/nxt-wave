@@ -18,3 +18,11 @@
     top: 14px;
   }
 }
+
+@media #{$media-mobile} {
+  .searchWrapper {
+    .searchBar {
+      width: 100%;
+    }
+  }
+}
