@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { homepage } from "../../api/homepage";
 import {
   ItemGrid,
   Layout,
@@ -6,8 +7,11 @@ import {
   Search,
   SelectionTabs,
 } from "../../components";
-import data from "../../data/dummy.json";
-export const HomePage = () => {
+
+interface HomePageProps {
+  data: homepage[] | null;
+}
+export const HomePage: React.FC<HomePageProps> = ({ data }) => {
   const [tag, setTag] = useState<"resource" | "request" | "user">("resource");
   const [searchString, setSearchString] = useState("");
   return (
