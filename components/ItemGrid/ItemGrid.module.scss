@@ -3,7 +3,7 @@
 .itemGrid {
   font-family: $rubik;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   justify-content: center;
   margin-top: 32px;
   gap: 32px;
@@ -28,7 +28,6 @@
       }
     }
     animation: fadeIn 1 forwards 0.5s;
-    width: 360px;
     height: 192px;
     .cardTitleWrapper {
       display: flex;

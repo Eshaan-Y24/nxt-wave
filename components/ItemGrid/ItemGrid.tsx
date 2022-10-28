@@ -26,7 +26,8 @@ export const ItemGrid: React.FC<ItemGridProps> = ({
               item.title.toLowerCase().includes(searchString.toLowerCase()) ||
               item.description
                 .toLowerCase()
-                .includes(searchString.toLowerCase())
+                .includes(searchString.toLowerCase()) ||
+              item.category.toLowerCase().includes(searchString.toLowerCase())
             );
           else return true;
         })
