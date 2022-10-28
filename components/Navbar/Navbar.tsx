@@ -8,14 +8,14 @@ export const Navbar = () => {
     <nav className={styles.navbar}>
       <img
         className={styles.logo}
-        src={dummy[0].icon_url}
+        src="/assets/logo.png"
         alt=""
         height={40}
         width={82}
       />
       <div className={styles.options}>
         <button className={styles.addItem}>Add Item</button>
-        <img src={dummy[0].icon_url} alt="" className={styles.avatar} />
+        <img src="/assets/user.png" alt="" className={styles.avatar} />
       </div>
     </nav>
   );
