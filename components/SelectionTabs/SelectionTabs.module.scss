@@ -1,0 +1,34 @@
+@import "../../styles/Variables.scss";
+
+.tabContainer {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 600px;
+  border: 1px solid $grey;
+  .tab {
+    padding: 8px 0;
+    font-size: 14px;
+    border-right: 1px solid $grey;
+    transition: 0.2s;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+  }
+  .tab:hover {
+    background-color: $grey;
+  }
+  .selectedTab {
+    padding: 8px 0;
+    font-size: 14px;
+    border-right: 1px solid $grey;
+    background-color: $blue;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+  }
+  margin: auto;
+  margin-top: 46px;
+}
