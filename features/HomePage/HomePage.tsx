@@ -1,9 +1,15 @@
 import React, { useState } from "react";
-import { ItemGrid, Layout, PageSection, SelectionTabs } from "../../components";
+import {
+  ItemGrid,
+  Layout,
+  PageSection,
+  Search,
+  SelectionTabs,
+} from "../../components";
 import data from "../../data/dummy.json";
 export const HomePage = () => {
   const [tag, setTag] = useState<"resource" | "request" | "user">("resource");
-
+  const [searchString, setSearchString] = useState("");
   return (
     <PageSection>
       <SelectionTabs
@@ -15,8 +21,13 @@ export const HomePage = () => {
           { label: "Users", value: "user" },
         ]}
       />
-      <ItemGrid data={data} selectedTag={tag} searchString={""} />
-      {tag}
+      <Search selector={setSearchString} selected={searchString} />
+      <ItemGrid
+        key={searchString + tag}
+        data={data}
+        selectedTag={tag}
+        searchString={searchString}
+      />
     </PageSection>
   );
 };

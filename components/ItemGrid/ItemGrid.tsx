@@ -23,8 +23,10 @@ export const ItemGrid: React.FC<ItemGridProps> = ({
         .filter((item, index) => {
           if (searchString !== "")
             return (
-              item.title.includes(searchString) ||
-              item.description.includes(searchString)
+              item.title.toLowerCase().includes(searchString.toLowerCase()) ||
+              item.description
+                .toLowerCase()
+                .includes(searchString.toLowerCase())
             );
           else return true;
         })
@@ -76,7 +78,10 @@ const Card: React.FC<CardProps> = ({
           <p className={styles.cardCategory}>{category}</p>
         </div>
       </div>
-      <p className={styles.cardLink}>{link}</p>
+      <br />
+      <a href={link} className={styles.cardLink}>
+        {link}
+      </a>
       <p className={styles.cardDescription}>{description}</p>
     </div>
   );

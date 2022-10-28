@@ -1,0 +1,20 @@
+@import "../../styles/Variables.scss";
+
+.searchWrapper {
+  margin-top: 32px;
+  .searchBar {
+    border: 1px $grey solid;
+    height: 40px;
+    padding-left: 46px;
+    width: 55%;
+  }
+  ::placeholder {
+    color: $grey;
+  }
+  position: relative;
+  .searchIcon {
+    position: absolute;
+    left: 18px;
+    top: 14px;
+  }
+}

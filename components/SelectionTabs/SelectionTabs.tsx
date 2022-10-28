@@ -16,20 +16,22 @@ export const SelectionTabs: React.FC<SelectionTabsProps> = ({
   selected,
 }) => {
   return (
-    <div className={styles.tabContainer}>
-      {titles?.map((item, index) => {
-        return (
-          <div
-            className={
-              item.value === selected ? styles.selectedTab : styles.tab
-            }
-            key={index}
-            onClick={() => selector(item.value)}
-          >
-            {item.label}
-          </div>
-        );
-      })}
+    <div className={styles.tabWrapper}>
+      <div className={styles.tabContainer}>
+        {titles?.map((item, index) => {
+          return (
+            <div
+              className={
+                item.value === selected ? styles.selectedTab : styles.tab
+              }
+              key={index}
+              onClick={() => selector(item.value)}
+            >
+              {item.label}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
