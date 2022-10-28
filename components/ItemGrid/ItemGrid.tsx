@@ -3,7 +3,7 @@ import { homepage } from "../../api/homepage";
 import styles from "./ItemGrid.module.scss";
 
 interface ItemGridProps {
-  data: homepage[];
+  data: homepage[] | null;
   selectedTag: "resource" | "request" | "user";
   searchString: string;
 }
@@ -16,11 +16,11 @@ export const ItemGrid: React.FC<ItemGridProps> = ({
   return (
     <div className={styles.itemGrid}>
       {data
-        .filter((item, index) => {
+        ?.filter((item, index) => {
           if (selectedTag === "resource") return true;
           else return item.tag.toLowerCase() == selectedTag.toLowerCase();
         })
-        .filter((item, index) => {
+        ?.filter((item, index) => {
           if (searchString !== "")
             return (
               item.title.toLowerCase().includes(searchString.toLowerCase()) ||
@@ -31,7 +31,7 @@ export const ItemGrid: React.FC<ItemGridProps> = ({
             );
           else return true;
         })
-        .map((item, index) => {
+        ?.map((item, index) => {
           return (
             <div key={item.id}>
               <Card

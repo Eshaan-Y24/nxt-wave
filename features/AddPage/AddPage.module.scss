@@ -1,0 +1,17 @@
+@import "../../styles/Variables.scss";
+
+.addWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  .formWrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-width: 320px;
+    padding: 0 16px;
+  }
+  .pageImage {
+    flex: 1;
+    min-width: 300px;
+  }
+}
