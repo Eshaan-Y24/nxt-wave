@@ -1,21 +1,21 @@
 import React, { useState } from "react";
-import { Layout, PageSection, SelectionTabs } from "../../components";
-
+import { ItemGrid, Layout, PageSection, SelectionTabs } from "../../components";
+import data from "../../data/dummy.json";
 export const HomePage = () => {
-  const [tag, setTag] = useState<"Resources" | "Requests" | "Users">(
-    "Resources"
-  );
+  const [tag, setTag] = useState<"resource" | "request" | "user">("resource");
 
   return (
     <PageSection>
       <SelectionTabs
         selector={setTag}
         selected={tag}
-        titles={["Resources", "Requests", "Users"]}
+        titles={[
+          { label: "Resources", value: "resource" },
+          { label: "Requests", value: "request" },
+          { label: "Users", value: "user" },
+        ]}
       />
-      <br />
-      <br />
-      <br />
+      <ItemGrid data={data} selectedTag={tag} searchString={""} />
       {tag}
     </PageSection>
   );
