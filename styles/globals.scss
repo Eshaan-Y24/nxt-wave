@@ -9,4 +9,9 @@ body {
 * {
   box-sizing: border-box;
   font-family: $rubik;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none !important;
 }
