@@ -1,0 +1,29 @@
+@import "../../styles/Variables.scss";
+
+.pageButtons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+  button {
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 100px;
+    cursor: pointer;
+  }
+  button:first-of-type {
+    background-color: $green;
+  }
+  button:last-of-type {
+    background-color: $green;
+  }
+  .disabledButton {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
