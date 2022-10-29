@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { homepage } from "../../api/homepage";
+import { Loader } from "../Loader/Loader";
 import styles from "./ItemGrid.module.scss";
 
 interface ItemGridProps {
@@ -16,11 +17,11 @@ export const ItemGrid: React.FC<ItemGridProps> = ({
   return (
     <div className={styles.itemGrid}>
       {data
-        ?.filter((item, index) => {
+        ?.filter((item) => {
           if (selectedTag === "resource") return true;
           else return item.tag.toLowerCase() == selectedTag.toLowerCase();
         })
-        ?.filter((item, index) => {
+        ?.filter((item) => {
           if (searchString !== "")
             return (
               item.title.toLowerCase().includes(searchString.toLowerCase()) ||
@@ -31,7 +32,7 @@ export const ItemGrid: React.FC<ItemGridProps> = ({
             );
           else return true;
         })
-        ?.map((item, index) => {
+        ?.map((item) => {
           return (
             <div key={item.id}>
               <Card

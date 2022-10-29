@@ -37,3 +37,9 @@
     border-radius: 50%;
   }
 }
+
+@media #{$media-mobile} {
+  .navbar {
+    padding: 0px 32px;
+  }
+}

@@ -14,7 +14,7 @@
   label {
     font-size: 12px;
     color: $darkGrey;
-    margin-top: 32px;
+    margin-top: 20px;
   }
   input,
   textarea {
@@ -43,5 +43,35 @@
   }
   button:hover {
     opacity: 0.6;
+  }
+  .errorMsgShow {
+    color: red;
+    animation: shake 1 0.1s ease;
+    font-size: 12px;
+    opacity: 1;
+    height: 12px;
+  }
+  .errorMsgHide {
+    opacity: 0;
+    font-size: 12px;
+    height: 12px;
+  }
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 10px;
+  }
+  40% {
+    margin-left: 0;
+  }
+  60% {
+    margin-left: 10px;
+  }
+  80% {
+    margin-left: 0;
   }
 }
