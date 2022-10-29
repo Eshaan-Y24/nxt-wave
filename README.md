@@ -13,10 +13,15 @@ npx create-next-app@latest --ts
 yarn create next-app --typescript
 ```
 
-Prettier is an opinionated code formatter which ensures one unified code format. Hence configuring the project in accordance to it, help maintaining code-flows and maintins uniformity
+Prettier is an opinionated code formatter which ensures one unified code format. Hence configuring the project in accordance to it, help maintaining code-flows and maintins uniformity.
 
 ```bash
-npm prettier
+npm install prettier
+```
+Following this, a prettier config file was also declared for opnionated prettifying. Running the below instruction, prettifies all the code, except the one in prettier ignore file.
+
+```bash
+npm run format
 ```
 
 Husky is a tool that allows us to check the commits, before we make errors while commiting itself. Hence it is a powerfull tool that runs ts and prettier check all over the code base. It was only relevant and necessary to install it.
@@ -53,7 +58,17 @@ Within the NextJS App, a number of folder were created.
 
 ## Features
 
+### Search with Debounce
+
 ### Login Check
+
+### Pagination
+
+### Input Check
+
+### Responsiveness
+
+### Smooth Animations
 
 ## References
 
