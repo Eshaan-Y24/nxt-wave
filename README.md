@@ -1,11 +1,13 @@
 This is my submission for NXT WAVE's SDE-1 Frontend-role. [link](https://nxt-wave-eshaan.netlify.app/)
 
 # NXT-WAVE Submission
+
 This project was made with NextJS, TypeScript and Sass. Enterprise friendly practices were utilised to build this, keeping in mind, the robustness, type checks and fool-proof design.
 
-
 ## Initialisation
+
 The following technologies were used
+
 - NextJS
 - TypeScript
 - Sass
@@ -26,6 +28,7 @@ Prettier is an opinionated code formatter which ensures one unified code format.
 ```bash
 npm install prettier
 ```
+
 Following this, a prettier config file was also declared for opnionated prettifying. Running the below instruction, prettifies all the code, except the one in prettier ignore file.
 
 ```bash
@@ -41,25 +44,31 @@ npm install husky
 ```
 
 ## Development
+
 The development process was simple. Start from the top, and create components one by one, fully styled. Responsiveness was take care of once compound components were ready to be built.
 
 ### Husky Commits
+
 Husky checks all the code, for type errors and prettier configurations, and on passing the test only, will it ever commit anything to the github repo. This protects the repo form broken and erred commits.
 
 ### Directory Structure
-Within the NextJS App, a number of folder were created. 
-- __Components__ include resuable single components, that can be called throughout the project.
-- __Features__ include multiple components and JSX elements to create compound sections and feature.
-- __Hooks__ consists of user defined hooks built by the user.
-- __Functions__ include API functions and other function as well.
-- __Types__ include the type interface of the data retrieved using the API.
+
+Within the NextJS App, a number of folder were created.
+
+- **Components** include resuable single components, that can be called throughout the project.
+- **Features** include multiple components and JSX elements to create compound sections and feature.
+- **Hooks** consists of user defined hooks built by the user.
+- **Functions** include API functions and other function as well.
+- **Types** include the type interface of the data retrieved using the API.
 
 ### Styling with Sass
+
 - A single Variable file was used to declare variables for colors and fonts along with key-frame animations.
 - Sass provides a was to import these within other Sass files as well.
 - This allows easy tracking and maintainence of code base.
 
 ### Typescript FTW
+
 - Typescript allows us to check the legitimaticy of the code that we write.
 - Every single components has a type/interface attached, so if the developer skips over the essential props, or assigns unexpected values, it will throw errors.
 - This help us to write fool proof and robust code.
