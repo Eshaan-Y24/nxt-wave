@@ -5,6 +5,14 @@ This project was made with NextJS, TypeScript and Sass. Enterprise friendly prac
 
 
 ## Initialisation
+The following technologies were used
+- NextJS
+- TypeScript
+- Sass
+- Prettier configuration
+- Husky
+- axios
+
 To initialise the app, first NextJS app was initialised with TypeScript configuration as follows:
 
 ```bash
