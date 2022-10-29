@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { homepage } from "../../api/homepage";
+import { CustomImage } from "../CustomImage/CustomImage";
 import { Loader } from "../Loader/Loader";
 import styles from "./ItemGrid.module.scss";
 
@@ -86,7 +87,7 @@ const Card: React.FC<CardProps> = ({
     <div className={styles.card}>
       <div className={styles.cardTitleWrapper}>
         <div className={styles.image}>
-          <img src={icon_url} alt="" />
+          <CustomImage src={icon_url} alt="" />
         </div>
         <div className={styles.cardLabelWrapper}>
           <p className={styles.cardTitle}>{title}</p>

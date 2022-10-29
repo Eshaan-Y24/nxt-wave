@@ -1,5 +1,6 @@
 import React from "react";
 import { debounce } from "../../functions/utils";
+import { CustomImage } from "../CustomImage/CustomImage";
 import styles from "./Search.module.scss";
 
 interface SearchProps {
@@ -10,7 +11,11 @@ interface SearchProps {
 export const Search: React.FC<SearchProps> = ({ selected, selector }) => {
   return (
     <div className={styles.searchWrapper}>
-      <img src="/assets/search.svg" className={styles.searchIcon} alt="" />
+      <CustomImage
+        src="/assets/search.svg"
+        className={styles.searchIcon}
+        alt=""
+      />
       <input
         title="search"
         placeholder="Search"

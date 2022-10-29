@@ -1,3 +1,4 @@
+export { CustomImage } from "./CustomImage/CustomImage";
 export { Form } from "./Form/Form";
 export { ItemGrid } from "./ItemGrid/ItemGrid";
 export { Layout } from "./Layout/Layout";

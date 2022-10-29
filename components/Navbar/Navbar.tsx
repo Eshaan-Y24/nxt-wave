@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useRef, useState } from "react";
 import { useClickOutside } from "../../hooks/useClickOutside";
+import { CustomImage } from "../CustomImage/CustomImage";
 import styles from "./Navbar.module.scss";
 
 interface NavbarProp {
@@ -28,7 +29,7 @@ export const Navbar: React.FC<NavbarProp> = ({ showAddButton, hideAvatar }) => {
   return (
     <nav className={styles.navbar}>
       <Link href={"/"}>
-        <img
+        <CustomImage
           className={styles.logo}
           src="/assets/logo.png"
           alt=""
@@ -43,7 +44,7 @@ export const Navbar: React.FC<NavbarProp> = ({ showAddButton, hideAvatar }) => {
           </Link>
         ) : null}
         {!hideAvatar && (
-          <img
+          <CustomImage
             src="/assets/user.png"
             alt=""
             className={styles.avatar}
@@ -58,11 +59,11 @@ export const Navbar: React.FC<NavbarProp> = ({ showAddButton, hideAvatar }) => {
         <div ref={closeRef} className={styles.menuDrawer}>
           <ul>
             <li onClick={handleSignOut}>
-              <img src="/assets/logout.svg" alt="" /> Sign Out
+              <CustomImage src="/assets/logout.svg" alt="" /> Sign Out
             </li>
             <Link href={"/add-item"}>
               <li>
-                <img src="/assets/add-icon.svg" alt="" /> Add Item
+                <CustomImage src="/assets/add-icon.svg" alt="" /> Add Item
               </li>
             </Link>
           </ul>
