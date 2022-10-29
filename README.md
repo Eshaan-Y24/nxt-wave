@@ -4,7 +4,7 @@ This is my submission for NXT WAVE's SDE-1 Frontend-role. [link](https://nxt-wav
 This project was made with NextJS, TypeScript and Sass. Enterprise friendly practices were utilised to build this, keeping in mind, the robustness, type checks and fool-proof design.
 
 
-#Initialisation
+# Initialisation
 To initialise the app, first NextJS app was initialised with TypeScript configuration as follows:
 
 ```bash
