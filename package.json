@@ -22,6 +22,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-parallax-tilt": "^1.7.68",
+    "react-toastify": "^9.0.8",
     "sass": "^1.55.0"
   },
   "devDependencies": {

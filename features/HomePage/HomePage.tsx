@@ -3,6 +3,7 @@ import { homepage } from "../../api/homepage";
 import {
   ItemGrid,
   Layout,
+  Loader,
   PageSection,
   Search,
   SelectionTabs,
@@ -26,12 +27,16 @@ export const HomePage: React.FC<HomePageProps> = ({ data }) => {
         ]}
       />
       <Search selector={setSearchString} selected={searchString} />
-      <ItemGrid
-        key={searchString + tag}
-        data={data}
-        selectedTag={tag}
-        searchString={searchString}
-      />
+      {!data ? (
+        <Loader />
+      ) : (
+        <ItemGrid
+          key={searchString + tag}
+          data={data}
+          selectedTag={tag}
+          searchString={searchString}
+        />
+      )}
     </PageSection>
   );
 };
