@@ -1,10 +1,10 @@
 This is my submission for NXT WAVE's SDE-1 Frontend-role. [link](https://nxt-wave-eshaan.netlify.app/)
 
-## NXT-WAVE Submission
+# NXT-WAVE Submission
 This project was made with NextJS, TypeScript and Sass. Enterprise friendly practices were utilised to build this, keeping in mind, the robustness, type checks and fool-proof design.
 
 
-# Initialisation
+## Initialisation
 To initialise the app, first NextJS app was initialised with TypeScript configuration as follows:
 
 ```bash
@@ -27,19 +27,35 @@ To initialise the app, first NextJS app was initialised with TypeScript configur
 npm install husky
 ```
 
+## Development
+The development process was simple. Start from the top, and create components one by one, fully styled. Responsiveness was take care of once compound components were ready to be built.
 
+### Husky Commits
+Husky checks all the code, for type errors and prettier configurations, and on passing the test only, will it ever commit anything to the github repo. This protects the repo form broken and erred commits.
 
+### Directory Structure
+Within the NextJS App, a number of folder were created. 
+- __Components__ include resuable single components, that can be called throughout the project.
+- __Features__ include multiple components and JSX elements to create compound sections and feature.
+- __Hooks__ consists of user defined hooks built by the user.
+- __Functions__ include API functions and other function as well.
+- __Types__ include the type interface of the data retrieved using the API.
 
+### Styling with Sass
+- A single Variable file was used to declare variables for colors and fonts along with key-frame animations.
+- Sass provides a was to import these within other Sass files as well.
+- This allows easy tracking and maintainence of code base.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Typescript FTW
+- Typescript allows us to check the legitimaticy of the code that we write.
+- Every single components has a type/interface attached, so if the developer skips over the essential props, or assigns unexpected values, it will throw errors.
+- This help us to write fool proof and robust code.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Features
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Login Check
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
+## References
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -47,9 +63,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
