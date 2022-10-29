@@ -8,6 +8,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 72px;
+  position: relative;
   .logo {
     height: 100%;
     width: 60px;
@@ -35,6 +37,39 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    cursor: pointer;
+  }
+  .menuDrawer {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 200px;
+    border: 2px solid $grey;
+    border-top: none;
+    border-right: none;
+    z-index: 100;
+    background-color: white;
+    ul {
+      list-style: none;
+      margin: 30px 0;
+      li {
+        font-size: 16px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+      }
+      li:hover {
+        opacity: 50%;
+        cursor: pointer;
+      }
+    }
   }
 }
 
