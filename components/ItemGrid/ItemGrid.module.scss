@@ -8,6 +8,12 @@
   margin-top: 32px;
   gap: 32px;
   padding-bottom: 40px;
+  min-height: 460px;
+  span {
+    font-size: 16px;
+    font-weight: 300;
+    color: $darkGrey;
+  }
   .card {
     background: white;
     border: 1px $grey solid;

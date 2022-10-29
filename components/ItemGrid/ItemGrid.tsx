@@ -37,25 +37,29 @@ export const ItemGrid: React.FC<ItemGridProps> = ({
 
   return (
     <div className={styles.itemGrid}>
-      {query
-        ?.filter((item, index) => {
-          return index >= page[0] && index <= page[1];
-        })
-        ?.map((item) => {
-          return (
-            <div key={item.id}>
-              <Card
-                category={item.category}
-                icon_url={item.icon_url}
-                description={item.description}
-                id={item.id}
-                link={item.link}
-                tag={item.tag}
-                title={item.title}
-              />
-            </div>
-          );
-        })}
+      {query && query.length ? (
+        query
+          ?.filter((item, index) => {
+            return index >= page[0] && index <= page[1];
+          })
+          ?.map((item) => {
+            return (
+              <div key={item.id}>
+                <Card
+                  category={item.category}
+                  icon_url={item.icon_url}
+                  description={item.description}
+                  id={item.id}
+                  link={item.link}
+                  tag={item.tag}
+                  title={item.title}
+                />
+              </div>
+            );
+          })
+      ) : (
+        <span>No matches found!</span>
+      )}
     </div>
   );
 };
