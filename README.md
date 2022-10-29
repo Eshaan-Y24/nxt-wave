@@ -3,6 +3,8 @@ This is my submission for NXT WAVE's SDE-1 Frontend-role. [link](https://nxt-wav
 ## NXT-WAVE Submission
 This project was made with NextJS, TypeScript and Sass. Enterprise friendly practices were utilised to build this, keeping in mind, the robustness, type checks and fool-proof design.
 
+
+#Initialisation
 To initialise the app, first NextJS app was initialised with TypeScript configuration as follows:
 
 ```bash
@@ -10,6 +12,24 @@ npx create-next-app@latest --ts
 # or
 yarn create next-app --typescript
 ```
+
+Prettier is an opinionated code formatter which ensures one unified code format. Hence configuring the project in accordance to it, help maintaining code-flows and maintins uniformity
+
+```bash
+npm prettier
+```
+
+Husky is a tool that allows us to check the commits, before we make errors while commiting itself. Hence it is a powerfull tool that runs ts and prettier check all over the code base. It was only relevant and necessary to install it.
+
+To initialise the app, first NextJS app was initialised with TypeScript configuration as follows:
+
+```bash
+npm install husky
+```
+
+
+
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
