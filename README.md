@@ -4,6 +4,8 @@ This is my submission for NXT WAVE's SDE-1 Frontend-role. [link](https://nxt-wav
 
 This project was made with NextJS, TypeScript and Sass. Enterprise friendly practices were utilised to build this, keeping in mind, the robustness, type checks and fool-proof design.
 
+![intro](./images/tabs.gif)
+
 ## Initialisation
 
 The following technologies were used
@@ -51,7 +53,11 @@ The development process was simple. Start from the top, and create components on
 
 Husky checks all the code, for type errors and prettier configurations, and on passing the test only, will it ever commit anything to the github repo. This protects the repo form broken and erred commits.
 
+![husky](./images/husky.png)
+
 ### Directory Structure
+
+![directories](./images/directory.png)
 
 Within the NextJS App, a number of folder were created.
 
@@ -73,19 +79,36 @@ Within the NextJS App, a number of folder were created.
 - Every single components has a type/interface attached, so if the developer skips over the essential props, or assigns unexpected values, it will throw errors.
 - This help us to write fool proof and robust code.
 
+![typescript types](./images/typed.png)
+
 ## Features
 
 ### Search with Debounce
 
+![search](./images/search.gif)
+<br /><br />
+
 ### Login Check
+
+![login](./images/login.gif)
+<br /><br />
 
 ### Pagination
 
+![pagination](./images/pagination.gif)
+<br /><br />
+
 ### Input Check
+
+![add items](./images/addItems.gif)
+<br /><br />
 
 ### Responsiveness
 
 ### Smooth Animations
+
+![animation](./images/anim.gif)
+<br /><br />
 
 ## References
 
