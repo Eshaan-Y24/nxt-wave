@@ -54,13 +54,15 @@ export const HomePage: React.FC<HomePageProps> = ({ data }) => {
           searchString={searchString}
         />
       )}
-      <PageButtons
-        disableNext={page[1] >= size - 1}
-        disablePrev={page[0] === 0}
-        page={page}
-        decrement={decrement}
-        increment={increment}
-      />
+      {size ? (
+        <PageButtons
+          disableNext={page[1] >= size - 1}
+          disablePrev={page[0] === 0}
+          page={page}
+          decrement={decrement}
+          increment={increment}
+        />
+      ) : null}
     </PageSection>
   );
 };
