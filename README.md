@@ -1,4 +1,4 @@
-This is my submission for NXT WAVE's SDE-1 Frontend-role.
+This is my submission for NXT WAVE's SDE-1 Frontend-role. [link](https://nxt-wave-eshaan.netlify.app/)
 
 ## NXT-WAVE Submission
 This project was made with NextJS, TypeScript and Sass. Enterprise friendly practices were utilised to build this, keeping in mind, the robustness, type checks and fool-proof design.
