@@ -105,7 +105,7 @@ Within the NextJS App, a number of folder were created.
 
 ### Responsiveness
 
-![animation](./images/ezgif.com-gif-maker (32).gif)
+![animation](./images/responsive.gif)
 <br /><br />
 
 ### Smooth Animations
