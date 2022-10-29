@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Layout, PageSection } from "../../components";
+import { CustomImage, Form, Layout, PageSection } from "../../components";
 import styles from "./AddPage.module.scss";
 export const AddPage = () => {
   return (
@@ -8,7 +8,11 @@ export const AddPage = () => {
         <div className={styles.formWrapper}>
           <Form />
         </div>
-        <img src="/assets/pageImage.png" className={styles.pageImage} alt="" />
+        <CustomImage
+          src="/assets/pageImage.png"
+          className={styles.pageImage}
+          alt=""
+        />
       </div>
     </section>
   );
