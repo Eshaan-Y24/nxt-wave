@@ -1,13 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is my submission for NXT WAVE's SDE-1 Frontend-role.
 
 ## Getting Started
+This project was made with NextJS, TypeScript and Sass. Enterprise friendly practices were utilised to build this, keeping in mind, the robustness, type checks and fool-proof design.
 
-First, run the development server:
+To initialise the app, first NextJS app was initialised with TypeScript configuration as follows:
 
 ```bash
-npm run dev
+npx create-next-app@latest --ts
 # or
-yarn dev
+yarn create next-app --typescript
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
