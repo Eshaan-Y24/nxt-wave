@@ -13,7 +13,7 @@ export default function Home() {
         router.push("/login");
       }
     }
-  }, []);
+  }, [router]);
   return (
     <Layout showAddButton={false}>
       <AddPage />
