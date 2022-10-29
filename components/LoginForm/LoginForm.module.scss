@@ -1,11 +1,17 @@
 @import "../../styles/Variables.scss";
 
-.formWrapper {
+.loginForm {
+  background: white;
+  padding: 32px;
+  position: relative;
+  animation: appearRight 0.5s ease-in 1 forwards;
   display: flex;
   flex-direction: column;
+  // height: calc(100vh - 72px);
+  width: 100%;
   min-width: 320px;
-  max-width: 100%;
-  margin: auto;
+  margin-top: calc(50% - 90px) auto 0 auto;
+  max-width: 400px;
   h1 {
     font-size: 32px;
     font-weight: 400;
@@ -55,5 +61,13 @@
     opacity: 0;
     font-size: 12px;
     height: 12px;
+  }
+}
+
+@media #{$media-mobile} {
+  .loginForm {
+    height: unset;
+    margin-top: 0;
+    max-width: unset;
   }
 }

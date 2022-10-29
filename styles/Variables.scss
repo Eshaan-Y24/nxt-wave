@@ -10,3 +10,60 @@ $media-desktop: "only screen and (max-width : 1024px)";
 $media-tablet: "only screen and (max-width : 768px)";
 $media-mobile: "only screen and (max-width : 600px)";
 $media-mobile-sm: "only screen and (max-width : 480px)";
+
+@keyframes leftAppear {
+  0% {
+    opacity: 0;
+    right: 100%;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+@keyframes appearRight {
+  0% {
+    opacity: 0;
+    left: 100%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 10px;
+  }
+  40% {
+    margin-left: 0;
+  }
+  60% {
+    margin-left: 10px;
+  }
+  80% {
+    margin-left: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

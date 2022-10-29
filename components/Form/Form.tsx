@@ -1,9 +1,12 @@
 import React, { useRef, useState } from "react";
 import styles from "./Form.module.scss";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { postData } from "../../functions";
 import axios from "axios";
+import {
+  showToastMessage,
+  ToastComponent,
+} from "../ToastComponent/ToastComponent";
 
 export const Form = () => {
   const name = useRef<HTMLInputElement>(null);
@@ -15,24 +18,6 @@ export const Form = () => {
   const [linkError, setLinkError] = useState(false);
   const [resourceError, setResourceError] = useState(false);
   const [descriptionError, setDescriptionError] = useState(false);
-
-  const showToastMessage = (type: "success" | "failure", message?: string) => {
-    if (type === "success")
-      toast.success(!message ? "Item created!" : message, {
-        position: toast.POSITION.TOP_RIGHT,
-      });
-    else
-      toast.error(message ? message : "Failure! Please try again later", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
-  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -166,19 +151,7 @@ export const Form = () => {
       >
         CREATE
       </button>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-        closeButton={false}
-      />
+      <ToastComponent />
     </form>
   );
 };
