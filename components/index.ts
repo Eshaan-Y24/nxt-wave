@@ -4,6 +4,7 @@ export { Layout } from "./Layout/Layout";
 export { Loader } from "./Loader/Loader";
 export { LoginForm } from "./LoginForm/LoginForm";
 export { Navbar } from "./Navbar/Navbar";
+export { PageButtons } from "./PageButtons/PageButtons";
 export { PageSection } from "./PageSection/PageSection";
 export { Search } from "./Search/Search";
 export { SelectionTabs } from "./SelectionTabs/SelectionTabs";
