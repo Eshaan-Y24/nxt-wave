@@ -8,6 +8,7 @@ This project was built with NextJS, TypeScript, and Sass. Enterprise-friendly pr
 <br/>
 ###### *Fig 1. Showing how the tabs filter and display relevant data.*
 <br/>
+
 ## Initialisation
 
 The following technologies were used
