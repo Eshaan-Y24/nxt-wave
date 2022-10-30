@@ -5,7 +5,9 @@ This is my submission for NXT WAVE's SDE-1 Frontend role. [link](https://nxt-wav
 This project was built with NextJS, TypeScript, and Sass. Enterprise-friendly practices were utilized to build this, keeping in mind, the robustness, type checks, and fool-proof design.
 
 ![intro](./images/tabs.gif)
-
+<br/>
+###### *Fig 1. Showing how the tabs filter and display relevant data.*
+<br/>
 ## Initialisation
 
 The following technologies were used
@@ -54,10 +56,16 @@ The development process was simple. Start from the top, and create components on
 Husky checks all the code, for type errors and prettier configurations, and on passing the test only, will it ever commit anything to the GitHub repo. This protects the repo from broken and erred commits.
 
 ![husky](./images/husky.png)
+<br/>
+###### *Fig 2. Husky checks the prettier configuration and typescript checks.*
+<br/>
 
 ### Directory Structure
 
 ![directories](./images/directory.png)
+<br/>
+###### *Fig 3. Directory structure for the web app.*
+<br/>
 
 Within the NextJS App, several folders were created.
 
@@ -80,37 +88,46 @@ Within the NextJS App, several folders were created.
 - This helps us to write foolproof and robust code.
 
 ![typescript types](./images/typed.png)
+<br/>
+###### *Fig 4. This is the type Generated for the data fetched by the API*
+<br/>
 
 ## Features
 
 ### Search with Debounce
 
-**Debounce** helps limit the API requests, by clubbing search queries while polling input at a particular interval. The search string changes every 800 ms, this limting the search queries. if used without debounce, every single character input and backspace will trigger a query.
-- First the data is filtered in accordance to tabs.
+**Debounce** helps limit the API requests, by clubbing search queries while polling input at a particular interval. The search string changes every 800 ms, thus limiting the search queries. if used without debounce, every single character input and backspace will trigger a query.
+- First the data is filtered in accordance to tabs (resource/user/request).
 - Then the data is filered in accordance to the inclusion of the search query string.
-- Lastly the data is queried in accordance to the page number.
+- Lastly the data is queried in accordance to the page number ([0, 5], [6, 11] ...).
 - Finally, this data is mapped onto a card component.
 
 ![search](./images/search.gif)
-<br /><br />
+<br/>
+###### *Fig 5. Search queries are debounced so as to reduce processing load and rerenders*
+<br />
 
 ### Login Check
 The login form saves an authentication token in the local storage of the application. Hence, even on reload, one can stay logged into the app.
 - The form checks incomplete inputs.
-- Since there is no backend, any input will provide a vali authentication.
+- Since there is no backend, any input will provide a valid authentication.
 - All pages redirect to login if the user hasn't logged in.
 
 ![login](./images/login.gif)
-<br /><br />
+<br/>
+###### *Fig 6. The login page*
+<br />
 
 ### Pagination
 - A useState variable saves the page range into an array of two numbers.
-- Filters kick in an display only the items within the page range.
+- Filters kick in and display only the items within the page range ([0, 5], [6, 11] ...).
 - Page range updates on button clicks.
-- Buttons are disabled if page range cannot be incremented.
+- Buttons are disabled if page range cannot be incremented or decremented.
 
 ![pagination](./images/pagination.gif)
-<br /><br />
+<br/>
+###### *Fig 7. At max 6 results are shown in the paginated items-display*
+<br />
 
 ### Input Check
 
@@ -118,7 +135,9 @@ The login form saves an authentication token in the local storage of the applica
 - useRef was used as a prefer value handling paradigm.
 
 ![add items](./images/addItems.gif)
-<br /><br />
+<br/>
+###### *Fig 8. The add Items page has empty checks for every form field*
+<br />
 
 ### Responsiveness
 
@@ -126,7 +145,9 @@ The login form saves an authentication token in the local storage of the applica
 - Apart from that, grid-template and flex was used to handle the responsive behaviour of the app.
 
 ![animation](./images/responsive.gif)
-<br /><br />
+<br/>
+###### *Fig 9. Fully responsive design*
+<br />
 
 ### Smooth Animations
 
@@ -134,7 +155,9 @@ The login form saves an authentication token in the local storage of the applica
 - The were called throught the application.
 
 ![animation](./images/anim.gif)
-<br /><br />
+<br/>
+###### *Fig 10. Smooth Animations*
+<br />
 
 ## References
 
