@@ -4,7 +4,7 @@ This is my submission for NXT WAVE's SDE-1 Frontend role. [link](https://nxt-wav
 
 This project was built with NextJS, TypeScript, and Sass. Enterprise-friendly practices were utilized to build this, keeping in mind, the robustness, type checks, and fool-proof design.
 
-![intro](./images/tabs.gif)
+![intro](https://i.postimg.cc/d0YYLVqF/tabs.gif)
 <br/>
 ###### *Fig 1. Showing how the tabs filter and display relevant data.*
 <br/>
@@ -56,14 +56,14 @@ The development process was simple. Start from the top, and create components on
 
 Husky checks all the code, for type errors and prettier configurations, and on passing the test only, will it ever commit anything to the GitHub repo. This protects the repo from broken and erred commits.
 
-![husky](./images/husky.png)
+![husky](https://i.postimg.cc/sDMyLLnk/directory.png)
 <br/>
 ###### *Fig 2. Husky checks the prettier configuration and typescript checks.*
 <br/>
 
 ### Directory Structure
 
-![directories](./images/directory.png)
+![directories](https://i.postimg.cc/WpWTXV7m/husky.png)
 <br/>
 ###### *Fig 3. Directory structure for the web app.*
 <br/>
@@ -88,7 +88,7 @@ Within the NextJS App, several folders were created.
 - Every single component has a type/interface attached, so if the developer skips over the essential props, or assigns unexpected values, it will throw errors.
 - This helps us to write foolproof and robust code.
 
-![typescript types](./images/typed.png)
+![typescript types](https://i.postimg.cc/MHvkhcY7/typed.png)
 <br/>
 ###### *Fig 4. This is the type Generated for the data fetched by the API*
 <br/>
@@ -103,7 +103,7 @@ Within the NextJS App, several folders were created.
 - Lastly the data is queried in accordance to the page number ([0, 5], [6, 11] ...).
 - Finally, this data is mapped onto a card component.
 
-![search](./images/search.gif)
+<img src="https://i.postimg.cc/63HJjVC6/search.gif" width="100%" alt="search with debounce"/>
 <br/>
 ###### *Fig 5. Search queries are debounced so as to reduce processing load and rerenders*
 <br />
@@ -114,7 +114,7 @@ The login form saves an authentication token in the local storage of the applica
 - Since there is no backend, any input will provide a valid authentication.
 - All pages redirect to login if the user hasn't logged in.
 
-![login](./images/login.gif)
+![login](https://i.postimg.cc/7YjDrNdf/login.gif)
 <br/>
 ###### *Fig 6. The login page*
 <br />
@@ -125,7 +125,7 @@ The login form saves an authentication token in the local storage of the applica
 - Page range updates on button clicks.
 - Buttons are disabled if page range cannot be incremented or decremented.
 
-![pagination](./images/pagination.gif)
+![pagination](https://i.postimg.cc/76PrntGQ/pagination.gif)
 <br/>
 ###### *Fig 7. At max 6 results are shown in the paginated items-display*
 <br />
@@ -135,7 +135,7 @@ The login form saves an authentication token in the local storage of the applica
 - Empty input fields are checked before making a post request.
 - useRef was used as a prefer value handling paradigm.
 
-![add items](./images/addItems.gif)
+![add items](https://i.postimg.cc/qqR04DpC/addItems.gif)
 <br/>
 ###### *Fig 8. The add Items page has empty checks for every form field*
 <br />
@@ -145,7 +145,7 @@ The login form saves an authentication token in the local storage of the applica
 - Several media query breakpoints were declared in the variable file.
 - Apart from that, grid-template and flex was used to handle the responsive behaviour of the app.
 
-![animation](./images/responsive.gif)
+![animation](https://i.postimg.cc/rpNLW2mr/responsive.gif)
 <br/>
 ###### *Fig 9. Fully responsive design*
 <br />
@@ -155,7 +155,7 @@ The login form saves an authentication token in the local storage of the applica
 - A bunch of keyframe animations were declared in the variable.scss file.
 - The were called throught the application.
 
-![animation](./images/anim.gif)
+![animation](https://i.postimg.cc/cLYWxnGT/anim.gif)
 <br/>
 ###### *Fig 10. Smooth Animations*
 <br />
