@@ -103,7 +103,7 @@ Within the NextJS App, several folders were created.
 - Lastly the data is queried in accordance to the page number ([0, 5], [6, 11] ...).
 - Finally, this data is mapped onto a card component.
 
-<img src="https://i.postimg.cc/63HJjVC6/search.gif" width="100%" alt="search with debounce"/>
+![search](https://i.postimg.cc/63HJjVC6/search.gif)
 <br/>
 ###### *Fig 5. Search queries are debounced so as to reduce processing load and rerenders*
 <br />
